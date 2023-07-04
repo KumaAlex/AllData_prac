@@ -6,9 +6,9 @@ export default createRouter ({
     history: createWebHashHistory(),
     routes:[
         {
-            path: '/desktop',
+            path: '/',
             component: MainComponent,
-            alias: '/'
+            // alias: '/'
         },
         {
             path: '/main',

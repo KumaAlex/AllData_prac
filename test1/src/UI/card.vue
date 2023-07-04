@@ -26,5 +26,5 @@ export default {
     }
 }
 </script>
-<style lang="scss" src="./card.sass" scoped>
+<style lang="scss" src="./card.scss" scoped>
 </style>

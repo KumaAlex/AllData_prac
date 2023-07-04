@@ -1,12 +1,14 @@
 <template>
     <div class="main">
         <div class="main__header">
-            <div class="main__header__left">
-                <img class="main__header__left-img" src="@/assets/desktop/mnenadologo1.png" alt="">
-                <p class="main__header__left-text">ваш личный помощник</p>
-            </div>
+            <router-link class="main__header__router" to="/">
+                <div class="main__header__left">
+                    <img class="main__header__left-img" src="@/assets/desktop/mnenadologo1.png" alt="">
+                    <p class="main__header__left-text">ваш личный помощник</p>
+                </div>
+            </router-link>
             <div class="main__header__right">
-                <button class="main__header__right__btn">ВХОД</button>
+                <router-link class="main__header__router" to="/main"><button class="main__header__right__btn">ВХОД</button></router-link>
             </div>
         </div>
 
@@ -14,18 +16,18 @@
             <div class="main__content__images">
                 <div class="main__content__images__left">
                     <img class="main__content__images__left-img1" src="@/assets/desktop/FrameHouseLogo.png" alt="">
-                    <p class="main__content__images__left-text">домашние<br/>мастера</p>
+                    <p class="main__content__images__left-text main__content-gradient">домашние<br/>мастера</p>
                 </div>
                 <div class="main__content__images__right">
                     <img class="main__content__images__right-img2" src="@/assets/desktop/FramePillsLogo.png" alt="">
-                    <p class="main__content__images__right-text">врачи</p>
+                    <p class="main__content__images__right-text main__content-gradient">врачи</p>
                 </div>
             </div>
 
             <div class="main__content__text">
                 <h1 class="main__content__text-topic">Что Вас интересует сегодня?</h1>    
                 <p class="main__content__text-description">
-                    Здусь Вы найдете домашний<br/> 
+                    Здесь Вы найдете домашний<br/> 
                     персонал, который поможет Вам<br/> 
                     организовать уют и порядок в доме!
                 </p>
@@ -47,5 +49,5 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped src="./MainComponent.sass">
+<style lang="scss" scoped src="./MainComponent.scss">
 </style>
