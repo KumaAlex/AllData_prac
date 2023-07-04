@@ -20,13 +20,16 @@
                 <a class="main__header__search-img" @click="search()"><img src="@/assets/main/search.png" alt=""></a>
             </div>
 
-            <div class="main__header__btn1">
-                <button class="main__header__btn1-button">СТАТЬ СПЕЦИАЛИСТОМ</button>
-            </div>
+            <div class="main__header__btns">
+                <div class="main__header__btns__btn1">
+                    <button class="main__header__btns__btn1-button">СТАТЬ СПЕЦИАЛИСТОМ</button>
+                </div>
 
-            <div class="main__header__btn2">
-                <button class="main__header__btn2-button">ВХОД</button>
+                <div class="main__header__btns__btn2">
+                    <button class="main__header__btns__btn2-button">ВХОД</button>
+                </div>
             </div>
+            
         </div>
 
         <div class="main__content">
@@ -114,7 +117,7 @@
     </div>
 </template>
 <script>
-import card from "@/UI/card.vue"
+import card from "@/components/card/card.vue"
 import FrameComp from "@/components/Frame/Frame.vue"
 import Frame2Comp from "@/components/Frame2/Frame2.vue"
 import FooterCols from "@/components/FooterCols/FooterCols.vue"
@@ -187,15 +190,18 @@ export default {
             return ans;     
         },
         search() {
-            console.log(this.searchRequest);
+            const request = this.searchRequest.trim()
+            if (request !== "") {
+                console.log(request);    
+            }
             this.searchRequest = "";
         },
         changeOption(option) {
             this.selectedOption = option; 
         }
     },
-    mounted() {
-        axios.get("/fake_data.json")
+    async mounted() {
+        await axios.get("/fake_data.json")
         .then(response => this.applyData(response.data))
         .catch(error => console.log(error));
     }
