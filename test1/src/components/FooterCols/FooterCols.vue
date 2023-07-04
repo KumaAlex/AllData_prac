@@ -7,7 +7,8 @@
                 </div>
             </div>
             <div v-else class="FooterCols__list-item">
-                <router-link to="/" class="FooterCols__list-item-router"> {{ item.text }} </router-link>
+                <router-link v-if="item.strong" to="/" class="FooterCols__list-item-router"><strong>{{ item.text }}</strong> </router-link>
+                <router-link v-else to="/" class="FooterCols__list-item-router"> {{ item.text }} </router-link>
             </div>
         </div>
     </div>

@@ -27,6 +27,7 @@
                 font-weight: 300;
                 line-height: normal;
                 letter-spacing: 1px;
+                text-align: left;
             }
         }
         &__selector{
@@ -77,30 +78,33 @@
                 flex-shrink: 0;
             }
         }
-        &__btn1{
-            width: 194px;
-            height: 39px;
-            flex-shrink: 0;
-            &-button{
-                color: white;
-                border-radius: 19.5px;
-                border: 2px solid #52CAB6;
-                background: #52CAB6;
-                padding: 10px 10px;
+        &__btns{
+            display: flex;
+            flex-direction: row;
+            &__btn1{
+                width: 194px;
+                height: 39px;
+                flex-shrink: 0;
+                &-button{
+                    color: white;
+                    border-radius: 19.5px;
+                    border: 2px solid #52CAB6;
+                    background: #52CAB6;
+                    padding: 10px 10px;
+                }
             }
+            &__btn2{
+                width: 104px;
+                height: 39px;
+                flex-shrink: 0;
+                &-button{
+                    padding: 10px 20px;
+                    border-radius: 19.5px;
+                    color: rgba(82, 202, 182, 1);
+                    border: 2px solid #52CAB6;
+                }
+            }  
         }
-        &__btn2{
-            width: 104px;
-            height: 39px;
-            flex-shrink: 0;
-            &-button{
-                padding: 10px 20px;
-                border-radius: 19.5px;
-                color: rgba(82, 202, 182, 1);
-                border: 2px solid #52CAB6;
-            }
-        }  
-        
     }
     &__content{
         display: flex;
@@ -130,6 +134,7 @@
 
             &__serviceList{
                 display: grid;
+                flex-wrap: wrap;
                 grid-template-columns: 25% 25% 25% 25%;
                 align-self: center;
                 text-align: left;
@@ -238,6 +243,8 @@
         color: white;
         padding: 10px;
         &__table{
+            flex-wrap: wrap;
+            gap: 20px;
             padding: 60px;
             display: flex;
             flex-direction: row;
