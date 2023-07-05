@@ -3,8 +3,8 @@
         <div class="main__header">
             <router-link class="main__header__router" to="/">
                 <div class="main__header__left">
-                    <img class="main__header__left-img" src="@/assets/desktop/mnenadologo1.png" alt="">
-                    <p class="main__header__left-text">ваш личный помощник</p>
+                    <img class="main__header__left__img" src="@/assets/desktop/mnenadologo1.png" alt="">
+                    <p class="main__header__left__text">ваш личный помощник</p>
                 </div>
             </router-link>
             <div class="main__header__right">
@@ -15,18 +15,18 @@
         <div class="main__content">
             <div class="main__content__images">
                 <div class="main__content__images__left">
-                    <img class="main__content__images__left-img1" src="@/assets/desktop/FrameHouseLogo.png" alt="">
-                    <p class="main__content__images__left-text main__content-gradient">домашние<br/>мастера</p>
+                    <img class="main__content__images__left__img1" src="@/assets/desktop/FrameHouseLogo.png" alt="">
+                    <p class="main__content__images__left__text main__content__gradient">домашние<br/>мастера</p>
                 </div>
                 <div class="main__content__images__right">
-                    <img class="main__content__images__right-img2" src="@/assets/desktop/FramePillsLogo.png" alt="">
-                    <p class="main__content__images__right-text main__content-gradient">врачи</p>
+                    <img class="main__content__images__right__img2" src="@/assets/desktop/FramePillsLogo.png" alt="">
+                    <p class="main__content__images__right__text main__content__gradient">врачи</p>
                 </div>
             </div>
 
             <div class="main__content__text">
-                <h1 class="main__content__text-topic">Что Вас интересует сегодня?</h1>    
-                <p class="main__content__text-description">
+                <h1 class="main__content__text__topic">Что Вас интересует сегодня?</h1>    
+                <p class="main__content__text__description">
                     Здесь Вы найдете домашний<br/> 
                     персонал, который поможет Вам<br/> 
                     организовать уют и порядок в доме!

@@ -3,6 +3,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0px 43px;
         &__router{
             text-decoration: none;
         }
@@ -14,12 +15,11 @@
             font-weight: 300;
             line-height: normal;
             letter-spacing: 1px;
-            &-img{
+            &__img{
                 width: 135px;
                 height: 25px;
-                flex-shrink: 0;
             }
-            &-text{
+            &__text{
                 color: #8B8A8A;
                 font-size: 10px;
                 font-family: Avenir Next Cyr;
@@ -31,11 +31,12 @@
             }
         }
         &__selector{
-            &-select{
+            &__select{
                 display: flex;
                 padding: 3px;
                 flex-direction: column;
-                flex-shrink: 0;
+                border: none;
+
                 color: #605E5E;
                 font-size: 13px;
                 font-family: Malik Trial;
@@ -43,17 +44,15 @@
                 font-weight: 700;
                 line-height: normal;
                 letter-spacing: 1.04px;
-                border: none;
             }
         }
         &__search{
             display: flex;
             flex-direction: row;
             align-items: center;
-            border: 1px solid black;
-            box-shadow: -1px 0px 5px 2px rgba(0, 0, 0, 0.25);
             border-radius: 23.5px;
             padding: 10px;
+            box-shadow: 0px 4px 8px 0px rgb(218, 218, 218);
             input[type="search"]::-webkit-search-decoration,
             input[type="search"]::-webkit-search-results-button,
             //input[type] нужны чтобы не было видно 'x' - input
@@ -62,20 +61,24 @@
             -webkit-appearance:none;
             }
 
-            &-input{
-                width: 456px;
+            &__input{
+                color: #605E5E;
+                font-size: 11px;
+                font-family: Avenir Next Cyr;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                letter-spacing: 0.72px;
+
+                min-width: 456px;
                 height: 20px;
-                flex-shrink: 0;
-                // border-radius: 23.5px;
                 background: #FFF;
                 border: none;
                 outline: none;
             }
-            &-img{
+            &__img{
                 width: 15px;
                 height: 15px;
-                // margin-left: -30px;
-                flex-shrink: 0;
             }
         }
         &__btns{
@@ -84,24 +87,35 @@
             &__btn1{
                 width: 194px;
                 height: 39px;
-                flex-shrink: 0;
-                &-button{
-                    color: white;
+                &__button{
                     border-radius: 19.5px;
                     border: 2px solid #52CAB6;
                     background: #52CAB6;
                     padding: 10px 10px;
+                    color: #FFF;
+                    font-size: 10px;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2.3px;
                 }
             }
             &__btn2{
                 width: 104px;
                 height: 39px;
-                flex-shrink: 0;
-                &-button{
+                &__button{
                     padding: 10px 20px;
                     border-radius: 19.5px;
-                    color: rgba(82, 202, 182, 1);
                     border: 2px solid #52CAB6;
+                    color: #52CAB6;
+                    font-size: 10px;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2.3px;
+                    background-color: white;
                 }
             }  
         }
@@ -109,13 +123,13 @@
     &__content{
         display: flex;
         flex-direction: column;
-        &-gray_background{
+        &__gray_background{
             background: #FAF9F9;
         }
         &__image{
             display: flex;
             justify-content: center;
-            &-img {
+            &__img {
                 width: 100%;
             }
         }
@@ -123,9 +137,10 @@
             flex-wrap: wrap;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            margin-top: 80px;
-            padding-bottom: 100px;
+            justify-content: center;
+            gap: 89px;
+            margin-top: 40px;
+            padding-bottom: 50px;
         }
         &__service{ 
             display: flex;
@@ -134,15 +149,22 @@
 
             &__serviceList{
                 display: grid;
-                flex-wrap: wrap;
-                grid-template-columns: 25% 25% 25% 25%;
-                align-self: center;
+                grid-template-columns: repeat(4, auto);
+                justify-content: center;
                 text-align: left;
-                gap: 40px;
+                gap: 12px 40px;
+
+                color: #000;
+                font-size: 13px;
+                font-family: Avenir Next Cyr;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.78px;
             }
 
             &__btn{
-                &-btn{
+                &__btn{
                     border-radius: 30px;
                     border: 2px solid #52CAB6;
                     color: #52CAB6;
@@ -153,11 +175,12 @@
                     font-weight: 700;
                     line-height: normal;
                     letter-spacing: 2.6px;
+                    background-color: white;
                 }
             }
 
             &__frame{
-                gap: 40px;
+                gap: 100px;
                 display: flex;
                 flex-direction: column;
                 background: #FAF9F9;
@@ -167,8 +190,15 @@
                 &__text{
                     max-width: 40%;
                     align-self: center;
-                    &-txt{
+                    &__txt{
                         text-align: left;
+                        color: #939292;
+                        font-size: 15px;
+                        font-family: Avenir Next Cyr;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.9px;
                     }
                 }
     
@@ -178,8 +208,8 @@
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
-                    gap: 30px;
-                    &-card{
+                    gap: 99px;
+                    &__card{
                         display: flex;
                         flex-direction: column;
                         max-width: 30%;
@@ -190,28 +220,51 @@
                 display: flex;
                 flex-direction: row;
                 gap: 40px;
-                padding: 200px 40px 140px 40px;
-                
+                padding: 200px 0;
+                align-items: flex-start;
+                justify-content: center;
                 &__text{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     text-align: left;
                     width: 24%;
-
-                    &-title{
-
+                    
+                    width: 318px;
+                    &__title{
+                        color: #474545;
+                        font-size: 27px;
+                        font-family: Avenir Next Cyr;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 1.62px;
+                        width: 280px;
                     }
-                    &-txt{
-                        
+                    &__txt{
+                        color: #939292;
+                        font-size: 15px;
+                        font-family: Avenir Next Cyr;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 149.2%;
+                        letter-spacing: 0.9px;
+                        width: 260px;
                     }
                 }
                 &__cards{
                     flex-wrap: wrap;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-around;
-                    &-card{
+                    &__card{
+                        color: #757474;
+                        text-align: center;
+                        font-size: 13px;
+                        font-family: Avenir Next Cyr;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 138.2%;
+                        letter-spacing: 0.78px;
                     }
                 }
             }
@@ -250,10 +303,14 @@
             flex-direction: row;
             justify-content: space-around;
             padding-bottom: 100px;
-            &-col{
+            &__col{
                 display: flex;
                 flex-direction: column;
             }
         }
     }
+
+    // @media (max-width: 1200px) {
+    //     width: 100px;
+    // }
 }

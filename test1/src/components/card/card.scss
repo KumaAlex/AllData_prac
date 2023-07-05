@@ -1,14 +1,21 @@
 .card{
-    border: 3px solid white;
+    border: 0px;
     border-radius: 18px;
+    font-size: 14px;
+    font-family: Avenir Next Cyr;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.84px;
+    width: 186px;
+    height: 290px;
+    box-shadow: 4px 4px 8px 2px rgb(238, 238, 238);
     &:hover{
-    box-shadow: 0px 0px 6px 1px;
-    font-size: large;
+        font-size: 16px;
+        box-shadow: 0px 0px 10px 2px rgb(218, 218, 218);
     }
     min-width: 30px;
-    &-img{
-
-    }
+    &-img{}
     &-text{
         margin: 10px;
         display: flex;
@@ -16,11 +23,5 @@
         flex-direction: column;
         flex-shrink: 0;
         color: #000;
-        font-size: 14px;
-        font-family: Avenir Next Cyr;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        letter-spacing: 0.84px;
     }
 }

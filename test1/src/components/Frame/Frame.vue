@@ -13,6 +13,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
     name: "FrameComp",
@@ -32,6 +33,7 @@ export default {
     }
 }
 </script>
+
 <style lang="scss" src="./Frame.scss" scoped>
     
 </style>
