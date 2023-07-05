@@ -1,0 +1,37 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 324px;
+  height: 450px;
+  align-items: center;
+}
+.frame__logo-img {
+  position: relative;
+  padding: 80px 80px 0px 80px;
+}
+.frame__name-txt {
+  width: min-content;
+  color: #605E5E;
+  text-align: center;
+  font-size: 19px;
+  font-family: Avenir Next Cyr;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.76px;
+}
+.frame__description {
+  display: flex;
+  width: 253px;
+  flex-direction: column;
+  color: #000;
+  font-size: 13px;
+  font-family: Avenir Next Cyr;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 154.2%;
+  letter-spacing: 1.04px;
+  text-align: left;
+}

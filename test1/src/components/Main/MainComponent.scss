@@ -1,6 +1,7 @@
 .main{
     position: relative;
     &__header{
+        padding: 0px 43px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -15,12 +16,12 @@
             font-weight: 300;
             line-height: normal;
             letter-spacing: 1px;
-            &-img{
+            &__img{
                 width: 135px;
                 height: 25px;
                 flex-shrink: 0;
             }
-            &-text{ 
+            &__text{ 
                 font-family: Avenir Next Cyr;
                 font-size: 10px;
                 font-weight: 300;
@@ -36,28 +37,34 @@
                 flex-shrink: 0;
                 border-radius: 19.5px;
                 border: 2px solid #52CAB6;
+                color: #52CAB6;
+                font-size: 10px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 2.3px;
+                background-color: transparent;
             }
         }
     }
     &__content{
-        margin-top: 8%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap-reverse;
-        &-gradient{
+        gap: 100px;
+        &__gradient{
             background: linear-gradient(146.6deg, #F7C3DC 19.87%, rgba(246, 164, 93, 0.85307) 26.93%, #EE7787 42.19%, #A95EA1 56.56%, #273067 67.9%);
             background-clip: text;
             color: transparent;
         }
         &__images{
             width: 534px;
-            text-align: center;
             display: flex;
-            justify-content: center;
-            gap: 14px;
-            &__left{
-                margin-right: 4%;                
+            align-items: end;
+            justify-content: flex-end;
+            gap: 13px;
+            &__left{                
                 padding: 10px;
                 display: flex;
                 flex-direction: column;
@@ -67,14 +74,14 @@
                 border: 1px solid white;
                 border-radius: 100px;
                 background-color: white;
-                box-shadow: 0px 0px 10px 1px gray;
+                box-shadow: 0px 0px 10px 0px rgb(218, 218, 218);
                 width: 118px;
                 height: 118px;
-                &-img1{
+                &__img1{
                     width: 66px;
                     height: 64px;
                 }
-                &-text{
+                &__text{
                     position: relative;
                     font-size: 11px;
                 }
@@ -88,29 +95,29 @@
                 border: 1px solid white;
                 border-radius: 100px;
                 background-color: white;
-                box-shadow: 0px 0px 10px 1px gray;
+                box-shadow: 0px 0px 8px 0px rgb(218, 218, 218);
                 width: 101px;
                 height: 101px;
-                &-img2{
+                &__img2{
                     position: relative;
                     width: 46px;
                     height: 47px;
                     left: 5%;
                 }
-                &-text{
-                    margin-top: 0px;
+                &__text{
                     position: relative;
                     font-size: 11px;
                 }
             }
         }
         &__text{
+            margin-top: 180px;
             display: flex;
             flex-direction: column;
             text-align: left;
-            justify-content: flex-start;
-            &-topic{
-                justify-content: flex-start;
+            gap: 33px;
+            &__topic{
+                margin: 0px;
                 max-width: 534px;
                 color: transparent;
                 -webkit-text-stroke: 2px white;
@@ -120,11 +127,10 @@
                 line-height: 113.1%;
                 letter-spacing: 5.5px;
             }
-            &-description{
-                justify-content: flex-end;
+            &__description{
                 width: 290px;
                 height: 128px;
-    
+                
                 color: #605E5E;
                 font-size: 14px;
                 font-family: Avenir Next Cyr;
@@ -140,10 +146,36 @@
         z-index: -1;
         position: fixed;
         top: -40vh;
-        left: 26vw;
+        left: 33vw;
         width: 1657px;
         height: 1657px;
         border-radius: 1657px;
         background: #FFC850;
+    }
+    @media (max-width: 800px) {
+        &__content{
+            display: flex;
+            justify-content: flex-end;
+            &__images{
+                justify-content: center;
+                position: absolute;
+            }
+            &__text{
+                gap: 180px;
+                align-items: flex-start;
+                text-align: left;
+                &__topic{
+                    justify-content: flex-start;
+                    max-width: 400px;
+                    color: transparent;
+                    -webkit-text-stroke: 1px white;
+                    font-size: 35px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 113.1%;
+                    letter-spacing: 3px;
+                }
+            }
+        }
     }
 }

@@ -4,29 +4,29 @@
             <router-link class="main__header__router" to="/">
                 <div class="main__header__logo">
                     <img v-if="mnenadologo" :src="require(`@/assets${mnenadologo}`)" alt="" />
-                    <!-- <img class="main__header__logo-img" src="@/assets/desktop/mnenadologo1.png" alt=""> -->
-                    <p class="main__header__logo-text">ваш личный помощник</p>
+                    <!-- <img class="main__header__logo__img" src="@/assets/desktop/mnenadologo1.png" alt=""> -->
+                    <p class="main__header__logo__text">ваш личный помощник</p>
                 </div>
             </router-link>
             <div class="main__header__selector">
-                <select class="main__header__selector-select" :="selectedOption" @change="changeOption(...$event.target.value)">
-                    <option class="main__header__selector-option" value="" selected hidden disabled>ГОРОД ВЫБЕРИ</option>
-                    <option class="main__header__selector-option" v-for="option in options" :key="option.title">{{ option.title }}</option>
+                <select class="main__header__selector__select" :="selectedOption" @change="changeOption(...$event.target.value)">
+                    <option class="main__header__selector__option" value="" selected hidden disabled>ГОРОД ВЫБЕРИ</option>
+                    <option class="main__header__selector__option" v-for="option in options" :key="option.title">{{ option.title }}</option>
                 </select>
             </div>
 
             <div class="main__header__search">
-                <input class="main__header__search-input" v-model="searchRequest" @keydown.enter="search" type="search" placeholder="ЧТО ВЫ ИЩЕТЕ? Например, заделать дыру в стене">
-                <a class="main__header__search-img" @click="search()"><img src="@/assets/main/search.png" alt=""></a>
+                <input class="main__header__search__input" v-model="searchRequest" @keydown.enter="search" type="search" placeholder="ЧТО ВЫ ИЩЕТЕ? Например, заделать дыру в стене">
+                <a class="main__header__search__img" @click="search()"><img src="@/assets/main/search.png" alt=""></a>
             </div>
 
             <div class="main__header__btns">
                 <div class="main__header__btns__btn1">
-                    <button class="main__header__btns__btn1-button">СТАТЬ СПЕЦИАЛИСТОМ</button>
+                    <button class="main__header__btns__btn1__button">СТАТЬ СПЕЦИАЛИСТОМ</button>
                 </div>
 
                 <div class="main__header__btns__btn2">
-                    <button class="main__header__btns__btn2-button">ВХОД</button>
+                    <button class="main__header__btns__btn2__button">ВХОД</button>
                 </div>
             </div>
             
@@ -34,7 +34,7 @@
 
         <div class="main__content">
             <div class="main__content__image">
-                <img class="main__content__image-img" src="@/assets/main/aaa1.png" alt="">
+                <img class="main__content__image__img" src="@/assets/main/aaa1.png" alt="">
             </div>
 
             <div class="main__content__cards">
@@ -45,25 +45,25 @@
 
             <div class="main__content__service">
                 <div class="main__content__service__serviceList">
-                    <div class="main__content__service__serviceList-service" v-for="(service, index) in cards" :key="index">
-                        <div>{{service.value}}</div>
+                    <div class="main__content__service__serviceList__service" v-for="(service, index) in cards" :key="index">
+                        <div class="main__content__service__serviceList__service__item">{{service.value}}</div>
                     </div>
                 </div>
 
                 <div v-show="!showServiceList" class="main__content__service__btn">
-                    <button class="main__content__service__btn-btn" v-on:click="showServiceList = true">
+                    <button class="main__content__service__btn__btn" v-on:click="showServiceList = true">
                         СМОТРЕТЬ ВСЁ
                     </button>
                 </div>
                 <div v-show="showServiceList" class="main__content__service__btn">
-                    <button class="main__content__service__btn-btn" v-on:click="showServiceList = false">
+                    <button class="main__content__service__btn__btn" v-on:click="showServiceList = false">
                         СВЕНУТЬ ^
                     </button>
                 </div>
 
                 <transition name="main__content__service__fade">
                         <div v-show="showServiceList" class="main__content__service__serviceList">
-                            <div class="main__content__service__serviceList-service" v-for="(service, index) in serviceList" :key="index">
+                            <div class="main__content__service__serviceList__service" v-for="(service, index) in serviceList" :key="index">
                                 <div>{{service.value}}</div>
                             </div>
                         </div>
@@ -71,13 +71,13 @@
 
                 <div class="main__content__service__frame">
                     <div class="main__content__service__frame__text">
-                        <div class="main__content__service__frame__text-txt">
+                        <div class="main__content__service__frame__text__txt">
                             {{ textFrame1 }}
                         </div>
                     </div>
 
                     <div class="main__content__service__frame__cards">
-                        <div class="main__content__service__frames__cards-card" v-for="frame in frames" :key="frame.id" >
+                        <div class="main__content__service__frames__cards__card" v-for="frame in frames" :key="frame.id" >
                             <FrameComp :name='frame.title' :img='frame.img' :text='frame.text'/>
                         </div>
                     </div>
@@ -85,17 +85,17 @@
 
                 <div class="main__content__service__frame2">
                     <div class="main__content__service__frame2__text">
-                        <h3 class="main__content__service__frame2__text-title">
+                    <h3 class="main__content__service__frame2__text__title">
                             {{ titleFrame2 }}
                         </h3>
-                        <div class="main__content__service__frame2__text-txt">
+                        <div class="main__content__service__frame2__text__txt">
                             {{ textFrame2 }}
                         </div>
                     </div>
 
                     <div class="main__content__service__frame2__cards">
-                        <div class="main__content__service__frame2__cards-card" v-for="frame in frames2" :key="frame.id">
-                            <Frame2Comp  :img = 'frame.img' :text='frame.text' />
+                        <div class="main__content__service__frame2__cards__card" v-for="frame in frames2" :key="frame.id">
+                            <Frame2Comp :width='frame.width'  :img = 'frame.img' :text='frame.text' />
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
 
         <div class="main__footer">
             <div class="main__footer__table">
-                <div class="main__footer__table-col" v-for="col in footerCols" :key="col">
+                <div class="main__footer__table__col" v-for="col in footerCols" :key="col">
                     <FooterCols :col='col'/>
                 </div>
             </div>

@@ -177,17 +177,21 @@
       {
         "id": 4,
         "img": "/main/frames/4.png",
-        "text": "Сравнивайте отзывы, рейтинги и цены"
+        "text": "Сравнивайте отзывы, рейтинги и цены", 
+        "width": "196px"
       },
       {
         "id": 5,
         "img": "/main/frames/5.png",
-        "text": "Выбирайте и связывайтесь с наиболее подходящим специалистом"
+        "text": "Выбирайте и связывайтесь с наиболее подходящим специалистом",
+        "width": "245px"
       },
       {
         "id": 6,
         "img": "/main/frames/6.png",
-        "text": "А для того чтобы не потерять и вновь обратиться к ним, сохраняйте понравившихся специалистов в ”Избранные”"
+        "text": "А для того чтобы не потерять и вновь обратиться к ним, сохраняйте понравившихся специалистов в ”Избранные”",
+        "width": "291px"
+
       }
     ],
     "footerCols": {
@@ -236,15 +240,21 @@
           "imgs": [
             {
               "id": 1,
-              "imgURL": "/main/social icons/instagram_black.png"
+              "imgURL": "/main/social icons/instagram_black.png",
+              "hoverImgURL": "/main/social icons/instagram.png",
+              "hover": false
             },
             {
               "id": 2,
-              "imgURL": "/main/social icons/facebook_black.png"
+              "imgURL": "/main/social icons/facebook_black.png",
+              "hoverImgURL": "/main/social icons/facebook.png",
+              "hover": false
             },
             {
               "id": 3,
-              "imgURL": "/main/social icons/vk_black.png"
+              "imgURL": "/main/social icons/vk_black.png",
+              "hoverImgURL": "/main/social icons/vk.png",
+              "hover": false
             }
           ]
         }
