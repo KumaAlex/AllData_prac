@@ -1,7 +1,7 @@
 <template>
     <div class="frame2">
         <div class="frame2__logo">
-            <img :src="require(`@/assets${img}`)" alt="" class="frame2__logo-img">
+            <img :src="require(`@/assets${img}`)" alt="" class="frame2__logo__img">
         </div>
         <div :style="{'--width': width}" class="frame2__description">
             {{ text }}

@@ -1,0 +1,21 @@
+.character {
+
+    display: flex;
+    flex-direction: column;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: rgb(39, 43, 51);
+        padding-top: 80px;
+        gap: 30px;
+    }
+
+    &__list-item {
+        max-width: 600px;
+        width: 90%;
+    }
+}
+

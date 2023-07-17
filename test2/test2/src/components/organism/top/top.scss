@@ -1,0 +1,41 @@
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0px 65px;
+    transition: ease all .5s;
+
+    &__logo {
+        align-self: flex-end;
+    }
+
+    &__btn {
+        align-self: center;
+        background-color: transparent;
+        color: #52CAB6;
+        
+        &::after{
+            content: "ВХОД";
+        }
+    }
+    
+
+    @media screen and (max-width: 769px) {
+        padding: 0px 20px;
+        &__logo{
+            align-self: center;
+        }
+        &__btn {
+            background-image: url('@/assets/main/green_human.png');
+            background-repeat: no-repeat;
+            max-width: 23px;
+            max-height: 23px;
+            background-position: center;
+
+            &::after{
+                content: none;
+            }
+        }
+    }
+}

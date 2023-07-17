@@ -1,14 +1,9 @@
-import createStore from 'vuex'
+import { createStore } from 'vuex'
 
 export default {
     store: createStore({
-        state() {
-            return{
-                access_token: "",
-                refresh_token: "",
-            }
+        state: {
+            access_token: "null"
         },
-        mutations: {
-        }
     })
 }
