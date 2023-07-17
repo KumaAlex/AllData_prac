@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-img">
             <!-- <img :src="require(`@/assets/main/cards/${img}`)" alt="" /> -->
-            <img v-if="img.length" :src="require(`@/assets${img}`)" alt="" />
+            <img class="card-img__image" v-if="img.length" :src="require(`@/assets${img}`)" alt="" />
         </div>
         <div class="card-text">
             {{value}}

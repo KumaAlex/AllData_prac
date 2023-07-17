@@ -1,0 +1,26 @@
+.search-info {
+    &__logo {}
+
+    &__selector {
+        display: flex;
+        padding: 3px;
+        flex-direction: column;
+        border: none;
+
+        color: #605E5E;
+        font-size: 13px;
+        font-family: Malik Trial;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.04px;
+    }
+
+    &__search-input {}
+
+    &__btns {}
+
+    &__btn-left {}
+
+    &__btn-right {}
+}

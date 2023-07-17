@@ -1,28 +1,19 @@
 <template>
     <div class="FooterCols">
-        <div class="FooterCols__list" v-for="item in col" :key="item.id">
-            <div v-if="item.imgs" class="FooterCols__list-item">
-                <div v-for="img in item.imgs" :key="img.id" class="FooterCols__list-item-imgs">
-                    <!-- <img :src="require(`@/assets${img.imgURL}`)" alt=""> -->
-                    <!-- <div class="FooterCols__list-item-imgs-back">ㅤ</div> -->
-                    <!-- <div :style="{ backgroundImage: `url(${backgroundImage})` }"></div> -->
-                    <div :style="{
+        <div class="FooterCols__list" v-for="item in cols" :key="item.id">
+            <div v-if="item.imgs" class="FooterCols__list__item">
+                <div v-for="img in item.imgs" :key="img.id" class="FooterCols__list__item__imgs">
+                    <div class="FooterCols__list__item__imgs-img" :style="{
                         backgroundImage: img.hover ? `url(${require(`@/assets${img.hoverImgURL}`)})` : `url(${require(`@/assets${img.imgURL}`)})`,
-                        backgroundSize: '100% 80%',
-                        backgroundRepeat: 'no-repeat',
-                        }"
-                        @mouseover="img.hover = true"
-                        @mouseleave="img.hover = false"
-                        >
-                        ㅤ
-                    </div>
-
-        <!-- <div :style="{'--width': width}" class="frame2__description"> -->
+                        }" @mouseover="img.hover = true" @mouseleave="img.hover = false" />
                 </div>
             </div>
-            <div v-else class="FooterCols__list-item">
-                <router-link v-if="item.strong" to="/" class="FooterCols__list-item-router FooterCols__list-item-icon"><strong>{{ item.text }}</strong> </router-link>
-                <router-link v-else to="/" class="FooterCols__list-item-router"> {{ item.text }} </router-link>
+            <div v-else class="FooterCols__list__item">
+                <router-link v-if="item.type" to="/" class="FooterCols__list__item__router" :style="{
+                    fontWeight: `${item.type}`
+                }"> {{ item.text }}
+                </router-link>
+                <div v-else to="/" class="FooterCols__list__item__router"> {{ item.text }} </div>
             </div>
         </div>
     </div>
@@ -30,19 +21,38 @@
 
 
 <script>
-export default {
-    name: "FooterCols",
-    props: {
-        col: {
-            type: Array,
+    export default {
+        name: "FooterCols",
+        data() {
+            return {
+                cols: this.col,
+            }
+        },
+        props: {
+            col: {
+                type: Array,
+            }
+        },
+        methods: {
+            addHover() {
+                this.cols.forEach(element => {
+                    if (element.imgs) {
+                        element.imgs.forEach(e => {
+                            e["hover"] = false;
+                        })
+                    }
+                });
+            },
+        },
+        mounted() {
+            this.addHover();
         }
-    }    
-}
+    }
 </script>
 
 
 <style lang="scss" src="./FooterCols.scss">
-    
+
 </style>
 
 

@@ -1,0 +1,19 @@
+.logo {
+    max-width: 135px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-image: url('@/assets/logos/mnenado-logo.png');
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    &::after {
+        content: "ваш личный помощник";
+        max-width: 135px;
+        color: #8B8A8B;
+        font-size: 12px;
+    }
+}

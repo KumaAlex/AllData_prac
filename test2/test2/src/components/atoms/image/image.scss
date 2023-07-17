@@ -1,0 +1,25 @@
+.image {
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: white;
+    box-shadow: (0px 4px 17px rgba(0, 0, 0, 0.15));
+
+    &_text_gradient::after {
+        background: linear-gradient(168deg, #F7C3DC 0%, rgba(246, 164, 93, 0.85) 14.69%, #EE7787 46.46%, #A95EA1 73.03%, #273067 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: min-content;
+
+        font-family: Avenir Next Cyr;
+        text-align: center;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 98.8%;
+        letter-spacing: 0.66px;
+    }
+}

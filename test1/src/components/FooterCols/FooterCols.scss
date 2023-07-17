@@ -1,20 +1,28 @@
-.FooterCols{
-    &__list{
+.FooterCols {
+    &__list {
         display: flex;
         flex-direction: column;
         text-align: left;
-        gap: 20px;
-        &-item{
+
+        &__item {
             display: flex;
             flex-direction: row;
             gap: 12px;
             align-items: center;
-            &-router{
+
+            &__router {
                 text-decoration: none;
-                color: white;
+                margin-bottom: 7px;
+                color: #FFF;
+                font-family: Avenir Next Cyr;
+                font-size: 12px;
             }
-            &-imgs-back{
-                background-image: url('@/assets/main/social icons/vk.png');
+
+            &__imgs__img {
+                width: 21px;
+                height: 21px;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
             }
         }
     }

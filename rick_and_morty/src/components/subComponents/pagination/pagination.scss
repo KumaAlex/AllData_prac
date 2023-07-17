@@ -1,0 +1,21 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 30px;
+    max-height: 60px;
+    gap: 20px;
+    background-color: rgb(39, 43, 51);
+    &__btn{
+        border-radius: 4px;
+        border: 1px solid black;
+        background: #3c3e44;
+        padding: 6px;
+        color: white;
+    }
+}
+
+.pagination_btn_edge{
+    width: 100px;
+    height: 100%;
+}

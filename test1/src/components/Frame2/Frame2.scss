@@ -1,19 +1,29 @@
-.frame2{
-    *{
+.frame2 {
+    * {
         margin: 20px;
     }
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    &__logo{
+
+    &__logo {
         width: 109.88px;
         height: 111.82px;
-        &-img {
+
+        &__img {
             margin: 0px;
         }
     }
-    &__description{
+
+    &__description {
+        color: #757474;
+        text-align: center;
+        font-family: Avenir Next Cyr;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.78px;
         max-width: var(--width);
     }
 }

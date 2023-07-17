@@ -1,14 +1,24 @@
-.main{
+.main {
     position: relative;
-    &__header{
+    height: 100vh;
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+
+    &__header {
         padding: 0px 43px;
         display: flex;
-        align-items: flex-start;
         justify-content: space-between;
-        &__router{
+        margin-top: 30px;
+
+        &__router {
+            z-index: 1;
             text-decoration: none;
         }
-        &__left{
+
+        &__left {
             color: #8B8A8B;
             font-size: 10px;
             font-family: Avenir Next Cyr;
@@ -16,12 +26,14 @@
             font-weight: 300;
             line-height: normal;
             letter-spacing: 1px;
-            &__img{
+
+            &__img {
                 width: 135px;
                 height: 25px;
                 flex-shrink: 0;
             }
-            &__text{ 
+
+            &__text {
                 font-family: Avenir Next Cyr;
                 font-size: 10px;
                 font-weight: 300;
@@ -30,8 +42,11 @@
                 text-align: left;
             }
         }
-        &__right{
-            &__btn{
+
+        &__right {
+            z-index: 1;
+
+            &__btn {
                 width: 104px;
                 height: 39px;
                 flex-shrink: 0;
@@ -46,47 +61,85 @@
                 letter-spacing: 2.3px;
                 background-color: transparent;
             }
+
+            &__btn:after {
+                content: "ВХОД";
+            }
         }
     }
-    &__content{
+
+    &__content {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 100px;
-        &__gradient{
+        justify-content: center; 
+        height: 100%;
+        gap: 30px;
+        margin-bottom: 20%;
+        margin-left: 20%;
+
+        font-family: Avenir Next Cyr;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.66px;
+
+
+        &__gradient {
             background: linear-gradient(146.6deg, #F7C3DC 19.87%, rgba(246, 164, 93, 0.85307) 26.93%, #EE7787 42.19%, #A95EA1 56.56%, #273067 67.9%);
             background-clip: text;
             color: transparent;
         }
-        &__images{
-            width: 534px;
+
+        &__images {
+            max-width: 100%;
+            z-index: 1;
             display: flex;
             align-items: end;
-            justify-content: flex-end;
+            justify-content: flex-start;
             gap: 13px;
-            &__left{                
+
+            &__left:after {
+                content: "домашние мастера";
+                background: linear-gradient(146.6deg, #F7C3DC 19.87%, rgba(246, 164, 93, 0.85307) 26.93%, #EE7787 42.19%, #A95EA1 56.56%, #273067 67.9%);
+                background-clip: text;
+                color: transparent;
+                width: min-content;
+            }
+
+            &__left {
                 padding: 10px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 1px;
+                gap: 10px;
                 border: 1px solid white;
                 border-radius: 100px;
-                background-color: white;
+                background: white;
                 box-shadow: 0px 0px 10px 0px rgb(218, 218, 218);
                 width: 118px;
                 height: 118px;
-                &__img1{
+
+                &__img1 {
                     width: 66px;
                     height: 64px;
                 }
-                &__text{
+
+                &__text {
                     position: relative;
                     font-size: 11px;
                 }
             }
-            &__right{
+
+            &__right:after {
+                content: "врачи";
+                background: linear-gradient(146.6deg, #F7C3DC 19.87%, rgba(246, 164, 93, 0.85307) 26.93%, #EE7787 42.19%, #A95EA1 56.56%, #273067 67.9%);
+                background-clip: text;
+                color: transparent;
+            }
+
+            &__right {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -94,31 +147,37 @@
                 gap: 4px;
                 border: 1px solid white;
                 border-radius: 100px;
-                background-color: white;
+                background: white;
                 box-shadow: 0px 0px 8px 0px rgb(218, 218, 218);
                 width: 101px;
                 height: 101px;
-                &__img2{
+                gap: 10px;
+
+                &__img2 {
                     position: relative;
                     width: 46px;
                     height: 47px;
-                    left: 5%;
+                    left: 6px;
+                    top: 8px;
+                    background-image: url("@/assets/desktop/FramePillsLogo.png");
+                    background-size: 100% 100%;
                 }
-                &__text{
+
+                &__text {
                     position: relative;
                     font-size: 11px;
                 }
             }
         }
-        &__text{
-            margin-top: 180px;
+
+        &__text {
+            z-index: 1; 
             display: flex;
             flex-direction: column;
             text-align: left;
-            gap: 33px;
-            &__topic{
-                margin: 0px;
+            &__topic {
                 max-width: 534px;
+
                 color: transparent;
                 -webkit-text-stroke: 2px white;
                 font-size: 55px;
@@ -126,11 +185,13 @@
                 font-weight: 900;
                 line-height: 113.1%;
                 letter-spacing: 5.5px;
+                font-family: Arial, Helvetica, sans-serif;
             }
-            &__description{
-                width: 290px;
-                height: 128px;
-                
+
+            &__description {
+                max-width: 290px;
+                max-height: 128px;
+
                 color: #605E5E;
                 font-size: 14px;
                 font-family: Avenir Next Cyr;
@@ -140,42 +201,105 @@
                 letter-spacing: 0.98px;
             }
         }
-        
+
     }
-    &__background{
-        z-index: -1;
-        position: fixed;
-        top: -40vh;
-        left: 33vw;
+
+    &__background {
+        z-index: 0;
+        position: absolute;
+        top: -44%;
+        left: 40%;
         width: 1657px;
         height: 1657px;
         border-radius: 1657px;
         background: #FFC850;
     }
-    @media (max-width: 800px) {
-        &__content{
-            display: flex;
-            justify-content: flex-end;
-            &__images{
-                justify-content: center;
-                position: absolute;
-            }
-            &__text{
-                gap: 180px;
-                align-items: flex-start;
-                text-align: left;
-                &__topic{
-                    justify-content: flex-start;
-                    max-width: 400px;
-                    color: transparent;
-                    -webkit-text-stroke: 1px white;
-                    font-size: 35px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 113.1%;
-                    letter-spacing: 3px;
+
+    @media (max-width: 1024px) {
+        &__header {
+            padding: 0px 20px;
+
+            &__right {
+                &__btn {
+                    background-image: url("@/assets/main/social icons/green_human.png");
+                    background-repeat: 0;
+                    background-size: 100% 100%;
+                    width: 23px;
+                    height: 23px;
+                    flex-shrink: 0;
+                }
+
+                &__btn:after {
+                    content: none;
                 }
             }
         }
+
+        &__content {
+            display: flex;
+            justify-content: flex-end;
+
+            &__images {
+                justify-content: center;
+                position: absolute;
+                align-items: center;
+                margin-top: 280px;
+
+                &__right:after {
+                    content: "здоровье";
+                    background: none;
+                    color: rgba(169, 169, 169, 1);
+                }
+
+                &__right {
+                    color: rgba(169, 169, 169, 1);
+
+                    background-position: 50% 50%;
+                    &__img2 {
+
+                        background-image: url("@/assets/desktop/pills_black.png");
+                        background-repeat: 0;
+                    }
+                }
+            }
+
+            &__text {
+                gap: 160px;
+                align-items: flex-start;
+                text-align: left;
+                margin-top: 160px;
+
+                &__topic {
+                    width: min-content;
+                    font-size: 41px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 113.1%;
+                    letter-spacing: 4.1px;
+                }
+
+                &__description {
+                    color: #605E5E;
+                    font-family: Avenir Next Cyr;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.84px;
+                }
+            }
+        }
+
+        // &__background {
+        //     z-index: 0;
+        //     position: absolute;
+        //     top: 10px;
+        //     left: 40px;
+        //     width: 988px;
+        //     height: 988px;
+        //     flex-shrink: 0;
+        //     border-radius: 1657px;
+        //     background: #FFC850;
+        // }
     }
 }

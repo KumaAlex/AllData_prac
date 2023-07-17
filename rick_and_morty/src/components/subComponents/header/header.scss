@@ -1,0 +1,73 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__links {
+            display: flex;
+            gap: 20px;
+
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        &__link-item {
+            display: flex;
+            text-decoration: none;
+            border: 1px solid black;
+            align-items: center;
+            padding: 0px 4px;
+            background-color: cadetblue;
+            color: white;
+            font-weight: 600;
+            border-radius: 10px 20px;
+        }
+
+        &__btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            margin: 0px;
+            gap: 20px;
+        }
+
+        &__btn-left {}
+
+        &__btn-right {
+            margin: 0px;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            font-weight: 700;
+            border: 1px solid rgb(255, 152, 0);
+            background: transparent;
+            color: rgb(51, 51, 51);
+        }
+    }
+
+    &__nav-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__bottomIMG {
+        background: rgb(197, 197, 197);
+        width: 100%;
+    }
+
+    &__bottom-links {
+        display: none;
+        background: rgb(197, 197, 197);
+        justify-content: center;
+        flex-direction: row;
+        gap: 30px;
+
+        @media screen and (max-width: 650px) {
+            display: flex;
+        }
+    }
+}

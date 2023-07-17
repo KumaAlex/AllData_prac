@@ -178,19 +178,19 @@
         "id": 4,
         "img": "/main/frames/4.png",
         "text": "Сравнивайте отзывы, рейтинги и цены", 
-        "width": "196px"
+        "width": "160px"
       },
       {
         "id": 5,
         "img": "/main/frames/5.png",
         "text": "Выбирайте и связывайтесь с наиболее подходящим специалистом",
-        "width": "245px"
+        "width": "170px"
       },
       {
         "id": 6,
         "img": "/main/frames/6.png",
         "text": "А для того чтобы не потерять и вновь обратиться к ним, сохраняйте понравившихся специалистов в ”Избранные”",
-        "width": "291px"
+        "width": "280px"
 
       }
     ],
@@ -199,39 +199,45 @@
         {
           "id": 1,
           "text": "Мне надо.кз",
-          "strong": true
+          "type": 700
         }
       ],
       "n2": [
         {
           "id": 1,
-          "text": "Стать специалистом"
+          "text": "Стать специалистом",
+          "type": 500
         },
         {
           "id": 2,
-          "text": "О нас"
+          "text": "О нас",
+          "type": 500
         },
         {
           "id": 3,
-          "text": "Публичная оферта"
+          "text": "Публичная оферта",
+          "type": 500
         }
       ],
       "n3": [
         {
           "id": 1,
-          "text": "г. Алматы ул. Фонвизина, 10"
+          "text": "г. Алматы ул. Фонвизина, 10",
+          "type": 100
         },
         {
           "id": 2,
-          "text": "+7 777 002 70 00"
+          "text": "+7 777 002 70 00",
+          "type": 700
         },
         {
           "id": 3,
-          "text": "info@mnenado.kz"
+          "text": "info@mnenado.kz",
+          "type": 400
         }
       ],
       "n4": [
-        {
+        { 
           "id": 1,
           "text": "Мы в социальных сетях"
         },
@@ -241,20 +247,17 @@
             {
               "id": 1,
               "imgURL": "/main/social icons/instagram_black.png",
-              "hoverImgURL": "/main/social icons/instagram.png",
-              "hover": false
+              "hoverImgURL": "/main/social icons/instagram.png"
             },
             {
               "id": 2,
               "imgURL": "/main/social icons/facebook_black.png",
-              "hoverImgURL": "/main/social icons/facebook.png",
-              "hover": false
+              "hoverImgURL": "/main/social icons/facebook.png"
             },
             {
               "id": 3,
               "imgURL": "/main/social icons/vk_black.png",
-              "hoverImgURL": "/main/social icons/vk.png",
-              "hover": false
+              "hoverImgURL": "/main/social icons/vk.png"
             }
           ]
         }
