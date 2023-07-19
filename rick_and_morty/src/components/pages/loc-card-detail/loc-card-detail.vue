@@ -1,20 +1,22 @@
 <template lang="">
-    <div class='loc-card-detail'>
+    <div class='loc-detail'>
         <h1>PODROBNIE DETALI EPISODA</h1>
 
 
-        <locCard class="loc-card-detail__info__card" :data='locData' />
+        <locCard class="loc-detail__info__card" :data='locData' />
 
 
-        <div class="loc-card-detail__info__characters">
+        <div class="loc-detail__info__characters">
 
             {{ countShowedCharacters }} / {{ maxCharacters }}
 
-            <button v-show="maxCharacters > countShowedCharacters" v-on:click="increaseCountShowedCharacters">show more</button>
+            <button v-show="maxCharacters > countShowedCharacters" v-on:click="increaseCountShowedCharacters">show
+                more</button>
 
-            <div class="loc-card-detail__info__characters-list">
+            <div class="loc-detail__info__characters-list">
                 <div v-for="(item, index) in charList" :key="index">
-                    <router-link class="loc-card-detail__info__characters-list__router" :to="{path: `/character/${item[0]}`}">{{item[0]}}: "{{ item[1] }}"</router-link>
+                    <router-link class="loc-detail__info__characters-list__router"
+                        :to="{path: `/character/${item[0]}`}">{{item[0]}}: "{{ item[1] }}"</router-link>
                 </div>
             </div>
 
@@ -22,8 +24,9 @@
     </div>
 </template>
 <script>
-    import axios from 'axios'
     import locCard from '@/components/subComponents/loc-card/loc-card'
+    import characterModel from '@/components/models/characterModel/characterModel'
+    import locationModel from '@/components/models/locationModel//locationModel'
     export default {
         name: 'loc-card-detail',
         components: {
@@ -39,27 +42,21 @@
         },
         methods: {
             async getData() {
-                try {
-                    const response = await axios.get(
-                        `https://rickandmortyapi.com/api/location/${this.$route.params.id}`);
-                    this.locData = response.data;
-                    this.maxCharacters = response.data.residents.length;
-                } catch (error) {
-                    console.log(error);
-                }
+                const data = new locationModel();
+                const res = await data.getData(`/${this.$route.params.id}`);
+                this.locData = res.locData;
+                this.maxCharacters = res.maxCnt;
             },
             async getCharacterName(url) {
-                try {
-                    const response = await axios.get(url);
-                    this.charList.push([response.data.id, response.data.name]);
-                } catch (error) {
-                    console.log(error);
-                }
+                const char = new characterModel();
+                const name = await char.getNameByUrl(url);
+                this.charList.push(name);
             },
             increaseCountShowedCharacters() {
-                this.countShowedCharacters += 5;
-                if (this.countShowedCharacters >= this.locData.residents.length) {
-                    this.countShowedCharacters = this.locData.residents.length;
+                if (this.countShowedCharacters + 5 >= this.maxCharacters) {
+                    this.countShowedCharacters = this.maxCharacters;
+                } else {
+                    this.countShowedCharacters += 5;
                 }
             }
         },
@@ -71,11 +68,12 @@
                     })
             }
         },
-        mounted() {
+        created() {
             this.getData();
+            setTimeout(this.increaseCountShowedCharacters, 200);
         }
     }
 </script>
 <style lang="scss" scoped src="./loc-card-detail.scss">
-    
+
 </style>

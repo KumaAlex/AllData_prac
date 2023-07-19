@@ -6,7 +6,6 @@
     max-height: 180px;
     border: 1px solid black;
     border-radius: 20px;
-    text-decoration: none;
     color: white;
     background-color: rgb(60, 62, 68);
 
@@ -16,6 +15,19 @@
         border-radius: 10% 0 0 10%;
     }
 
+    &__router{
+            
+            text-decoration: none;
+            color: white;
+
+            &:hover{
+                color: orange;
+            }
+            &:active{
+                color: blueviolet;
+            }
+        }
+
     &__info {
         display: flex;
         flex-direction: column;
@@ -24,15 +36,30 @@
         gap: 6px;
         padding: 10px;
 
-        &__item{
-            margin: 0;
-            padding: 0;
-        }
+
         &__item-key{
             color: gray;
             margin-bottom: 2px;
             margin-top: 2px;
-            
+        }
+
+        &__status-alive{
+            background-color: green;
+            color: green;
+            border-radius: 100px;
+            margin-right: 4px;
+        }
+        &__status-dead{
+            background-color: red;
+            color: red;
+            border-radius: 100px;
+            margin-right: 4px;
+        }
+        &__status-unknown{
+            background-color: white;
+            color: white;
+            border-radius: 100px;
+            margin-right: 4px;
         }
     }
     
