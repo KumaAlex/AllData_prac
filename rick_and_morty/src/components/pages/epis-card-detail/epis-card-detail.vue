@@ -1,20 +1,20 @@
 <template lang="">
-    <div class="epis-card-detail">
+    <div class="epis-detail">
         <h1>PODROBNIE DETALI EPISODA</h1>
 
 
-        <episCard class="epis-card-detail__info__card" :data='episodeData' />
+        <episCard class="epis-detail__info__card" :data='episodeData' />
 
 
-        <div class="epis-card-detail__info__characters">
+        <div class="epis-detail__info__characters">
 
             {{ countShowedCharacters }} / {{ maxCharacters }}
 
             <button v-show="maxCharacters > countShowedCharacters" v-on:click="increaseCountShowedCharacters">show more</button>
 
-            <div class="epis-card-detail__info__characters-list">
+            <div class="epis-detail__info__characters-list">
                 <div v-for="(item, index) in charList" :key="index">
-                    <router-link class="epis-card-detail__info__characters-list__router" :to="{path: `/character/${item[0]}`}">{{item[0]}}: "{{ item[1] }}"</router-link>
+                    <router-link class="epis-detail__info__characters-list__router" :to="{path: `/character/${item[0]}`}">{{item[0]}}: "{{ item[1] }}"</router-link>
                 </div>
             </div>
             
@@ -58,9 +58,10 @@
                 }
             },
             increaseCountShowedCharacters() {
-                this.countShowedCharacters += 5;
-                if (this.countShowedCharacters >= this.episodeData.characters.length) {
+                if (this.countShowedCharacters+5 >= this.episodeData.characters.length) {
                     this.countShowedCharacters = this.episodeData.characters.length;
+                } else {
+                    this.countShowedCharacters += 5;
                 }
             }
         },
@@ -72,8 +73,9 @@
                     })
             }
         },
-        mounted() {
+        created() {
             this.getData();
+            setTimeout(this.increaseCountShowedCharacters, 200);
         }
     }
 </script>

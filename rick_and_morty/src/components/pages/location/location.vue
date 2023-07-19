@@ -18,9 +18,9 @@
     </div>
 </template>
 <script>
-    import axios from 'axios'
     import locCard from '@/components/subComponents/loc-card/loc-card'
     import paginationComp from '@/components/subComponents/pagination/pagination.vue'
+    import locationModel from '@/components/models/locationModel/locationModel'
     export default {
         name: "locationPage",
         components: {
@@ -32,17 +32,15 @@
                 info: {},
                 results: {},
                 currentPage: 1,
+                page: 0,
             }
         },
         methods: {
-            async getData(page = 0) {
-                try {
-                    const response = await axios.get(`https://rickandmortyapi.com/api/location?page=${page}`);
-                    this.info = response.data.info;
-                    this.results = response.data.results;
-                } catch (error) {
-                    console.log(error);
-                }
+            async getData() {
+                const data = new locationModel();
+                const res = await data.getData(`?page=${this.page}`);
+                this.info = res.info;
+                this.results = res.results;
             },
             changePage(newPage) {
                 this.getData(newPage);

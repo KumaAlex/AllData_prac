@@ -11,8 +11,7 @@ export default createRouter ({
     routes:[
         {
             path: '/location',
-            component: location, 
-            // alias: '/'
+            component: location,
         },
         {
             path: '/location/:id',
@@ -28,7 +27,8 @@ export default createRouter ({
         },
         {
             path: '/character',
-            component: character,
+            component: character, 
+            alias: '/',
         },
         {
             path: '/character/:id',

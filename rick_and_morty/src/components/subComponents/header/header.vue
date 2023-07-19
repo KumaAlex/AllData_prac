@@ -37,7 +37,7 @@
         data() {
             return {
                 logoURL: "https://play-lh.googleusercontent.com/yfiIOdk6OF5T_ekvwQKSTjnP0ZQwGDbqXUQp6oBgqmFSX86xAfBEaEG3xCOBCtMjCA=w240-h480-rw",
-                headerBottomIMG: "https://www.pngplay.com/wp-content/uploads/14/Rick-And-Morty-Logo-Transparent-File.png",
+                headerBottomIMG: 'https://www.jamovie.it/wp-content/uploads/2017/10/rick-morty-3-jam.jpg',
             }
         }
     }
