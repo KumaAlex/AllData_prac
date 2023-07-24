@@ -1,9 +1,9 @@
-import character from '@/components/pages/character/character'
-import location from '@/components/pages/location/location'
-import episode from '@/components/pages/episode/episode'
-import charCardDetail from '@/components/pages/char-card-detail/char-card-detail'
-import episCardDetail from '@/components/pages/epis-card-detail/epis-card-detail'
-import locCardDetail from '@/components/pages/loc-card-detail/loc-card-detail'
+import character from '@/components/pages/character/character.vue'
+import location from '@/components/pages/location/location.vue'
+import episode from '@/components/pages/episode/episode.vue'
+import charCardDetail from '@/components/pages/char-card-detail/char-card-detail.vue'
+import episCardDetail from '@/components/pages/epis-card-detail/epis-card-detail.vue'
+import locCardDetail from '@/components/pages/loc-card-detail/loc-card-detail.vue'
 import { createRouter, createWebHashHistory } from "vue-router"
 
 export default createRouter ({
