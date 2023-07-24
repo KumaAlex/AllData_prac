@@ -16,9 +16,8 @@
                 }}
             <div class="loc-detail__info__characters-list">
                 <div v-for="(item, index) in charList" :key="index">
-                    {{item}}
-                    <!-- <router-link class="loc-detail__info__characters-list__router"
-                        :to="{path: `/character/${item[0]}`}">{{item[0]}}: "{{ item[1] }}"</router-link> -->
+                    <router-link class="loc-detail__info__characters-list__router"
+                        :to="{path: `/character/${item[0]}`}">{{item[0]}}: "{{ item[1] }}"</router-link>
                 </div>
             </div>
 
